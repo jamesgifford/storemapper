@@ -12,7 +12,7 @@ class MapController extends Controller
     {
         $stores = Store::all();
 
-        $map = Mapper::map(39.5, -98.35);
+        $map = Mapper::map(config('map.center_lat'), config('map.center_lon'));
 
         foreach($stores as $store) {
             $location = Mapper::location($store->full_address);
