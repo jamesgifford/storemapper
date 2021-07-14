@@ -5,16 +5,16 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class MapTest extends TestCase
 {
     /**
-     * A basic test example.
+     * Make sure the /map endpoint works.
      *
      * @return void
      */
-    public function test_example()
+    public function testMapEndpoint()
     {
-        $response = $this->get('/');
+        $response = $this->get('/map');
 
         $response->assertStatus(200);
     }
